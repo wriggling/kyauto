@@ -3,7 +3,6 @@ import requests as r
 import os
 from keep_alive import keep_alive
 import websocket
-import pyautogui
 from colorama import Fore, init
 import requests
 import random
