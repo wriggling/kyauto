@@ -27,21 +27,21 @@ print(f'''
 
 {Fore.RED}╦╔═╦ ╦╔═╗╦ ╦╔╦╗╔═╗
 {Fore.RED}╠╩╗╚╦╝╠═╣║ ║ ║ ║ ║
-{Fore.RED}╩ ╩ ╩ ╩ ╩╚═╝ ╩ ╚═╝{Fore.RESET}
+{Fore.RED}╩ ╩ ╩ ╩ ╩╚═╝ ╩ ╚═╝
 {Fore.BLUE}------------------------------
 {Fore.BLUE}USER INFO:
 {Fore.BLUE}Username: @{username}
-{Fore.BLUE}User ID: {userid} {Fore.RESET}
+{Fore.BLUE}User ID: {userid}
 ''')
 
 while True:
-    wait_time = random.randint(8, 10)
+    wait_time = random.randint(1, 3)
 
     message = random.choice(messages)
     json_data = {
         'content': message
     }
     r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", headers=headers, json=json_data)
-    print(f'{Fore.YELLOW}[@KYAUTO] {Fore.GREEN}[Waiting {str(wait_time)} seconds...] {Fore.RESET} Sent message > {message}')
+    print(f'{Fore.YELLOW}[@KYAUTO] {Fore.GREEN}[Waiting {str(wait_time)} seconds...] Sent message > {message}')
     keep_alive()
     time.sleep(wait_time)
