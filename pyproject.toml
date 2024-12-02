@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "KYUAUTO"
+name = "KYAUTO"
 version = "1.0.0"
 description = "A code that can make your discord account type 24/7"
 authors = ["cxcvc"]
