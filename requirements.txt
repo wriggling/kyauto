@@ -2,3 +2,5 @@ Flask
 websocket-client
 requests
 asyncio
+tk
+pyautogui
