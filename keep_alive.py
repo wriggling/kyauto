@@ -8,7 +8,7 @@ def main():
     return '<meta http-equiv="refresh" content="0; URL=https://phantom.is-a.dev/support"/>'
 
 def run():
-    app.run(host="162.220.253.253", port=45554)
+    app.run(host="77.238.224.28", port=8080)
 
 def keep_alive():
     server = Thread(target=run)
