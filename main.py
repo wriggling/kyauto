@@ -16,7 +16,7 @@ CHANNEL_ID = os.getenv("CHANNEL_ID")
 DON'T EDIT ANYTHING HERE
 """
 base_url = "https://discord.com/api/v9"
-url = f"{base_url}/channels/{channel_id}/typing"
+url = f"{base_url}/channels/{CHANNEL_ID}/typing"
 headers = {
     "authorization": usertoken
 }
