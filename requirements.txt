@@ -2,5 +2,7 @@ Flask
 websocket-client
 requests
 asyncio
-tk
-pyautogui
+init
+colorama
+time
+random
