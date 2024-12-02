@@ -2,7 +2,6 @@ Flask
 websocket-client
 requests
 asyncio
-init
 colorama
 time
 random
