@@ -35,13 +35,13 @@ print(f'''
 ''')
 
 while True:
-    wait_time = random.randint(17, 20)
+    wait_time = random.randint(10, 12)
 
     message = random.choice(messages)
     json_data = {
         'content': message
     }
     r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", headers=headers, json=json_data)
-    print(f'            {Fore.YELLOW}[%] {Fore.YELLOW}[{r.status_code}] {Fore.GREEN}[Waiting {str(wait_time)} seconds...] {Fore.RESET} Sent message > {message}')
+    print(f'            {Fore.YELLOW}[@KYAUTO] {Fore.GREEN}[Waiting {str(wait_time)} seconds...] {Fore.RESET} Sent message > {message}')
     keep_alive()
     time.sleep(wait_time)
