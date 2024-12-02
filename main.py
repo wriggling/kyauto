@@ -43,6 +43,5 @@ while True:
     }
     r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", headers=headers, json=json_data)
     print(f'            {Fore.YELLOW}[%] {Fore.YELLOW}[{r.status_code}] {Fore.GREEN}[Waiting {str(wait_time)} seconds...] {Fore.RESET} Sent message > {message}')
+    keep_alive()
     time.sleep(wait_time)
-
-keep_alive()
