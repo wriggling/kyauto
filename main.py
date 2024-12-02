@@ -24,25 +24,24 @@ discriminator = userinfo["discriminator"]
 userid = userinfo["id"]
 
 print(f'''
-{Fore.CYAN}
 
-╦╔═╦ ╦╔═╗╦ ╦╔╦╗╔═╗
-╠╩╗╚╦╝╠═╣║ ║ ║ ║ ║
-╩ ╩ ╩ ╩ ╩╚═╝ ╩ ╚═╝{Fore.RESET}
-------------------------------
-{Fore.GREEN}USER INFO:
-Username: @{username}
-User ID: {userid} {Fore.RESET}
+{Fore.RED}╦╔═╦ ╦╔═╗╦ ╦╔╦╗╔═╗
+{Fore.RED}╠╩╗╚╦╝╠═╣║ ║ ║ ║ ║
+{Fore.RED}╩ ╩ ╩ ╩ ╩╚═╝ ╩ ╚═╝{Fore.RESET}
+{Fore.BLUE}------------------------------
+{Fore.BLUE}USER INFO:
+{Fore.BLUE}Username: @{username}
+{Fore.BLUE}User ID: {userid} {Fore.RESET}
 ''')
 
 while True:
-    wait_time = random.randint(70, 200)
+    wait_time = random.randint(2, 5)
 
     message = random.choice(messages)
     json_data = {
         'content': message
     }
     r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", headers=headers, json=json_data)
-    print(f'            {Fore.YELLOW}[%] {Fore.YELLOW}[{r.status_code}] {Fore.LIGHTBLACK_EX}[Waiting {str(wait_time)} seconds or {str(wait_time/60)[0:4]} minutes...] {Fore.RESET} Sent message > {message}')
+    print(f'            {Fore.YELLOW}[%] {Fore.YELLOW}[{r.status_code}] {Fore.GREEN}[Waiting {str(wait_time)} seconds or {str(wait_time/5)[0:5]} secondd...] {Fore.RESET} Sent message > {message}')
     time.sleep(wait_time)
 keep_alive()
