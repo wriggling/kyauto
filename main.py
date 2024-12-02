@@ -38,7 +38,7 @@ print(f'''
 {Fore.BLUE}Username: @{username}
 {Fore.BLUE}ID: {userid} {Fore.RESET}
 ''')
-
+asyncio.run(main())
 while True:
     wait_time = random.randint(17, 20)
 
