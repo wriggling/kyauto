@@ -3,5 +3,4 @@ websocket-client
 requests
 asyncio
 colorama
-time
 random
