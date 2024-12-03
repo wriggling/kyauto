@@ -3,6 +3,7 @@ import requests as r
 import os
 from keep_alive import keep_alive
 import websocket
+import colorama
 from colorama import Fore, init
 import requests
 import random
@@ -22,26 +23,28 @@ userinfo = requests.get('https://canary.discordapp.com/api/v9/users/@me', header
 username = userinfo["username"]
 discriminator = userinfo["discriminator"]
 userid = userinfo["id"]
+guildid = userinfo["channel_id"]
+guildn = userinfo["channel_name"]
 
 print(f'''
-
 {Fore.RED}╦╔═╦ ╦╔═╗╦ ╦╔╦╗╔═╗
 {Fore.RED}╠╩╗╚╦╝╠═╣║ ║ ║ ║ ║
 {Fore.RED}╩ ╩ ╩ ╩ ╩╚═╝ ╩ ╚═╝
-{Fore.BLUE}------------------------------
-{Fore.BLUE}USER INFO:
-{Fore.BLUE}Username: @{username}
-{Fore.BLUE}User ID: {userid}
+{Fore.RESET}------------------------------
+{Fore.RESET}USER INFO:
+{Fore.GREEN}User: @{username}
+{Fore.YELLOW}ID: {userid}
+{Fore.MAGENTA}Server: {channel_name}{Fore.RESET},{Fore.BLUE} {channel_id}
 ''')
 
 while True:
-    wait_time = random.randint(10, 12)
+    wait_time = random.randint(4, 8)
 
     message = random.choice(messages)
     json_data = {
         'content': message
     }
     r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", headers=headers, json=json_data)
-    print(f'{Fore.YELLOW}[@KYAUTO] {Fore.GREEN}[Waiting {str(wait_time)} seconds...] Sent message > {message}')
+    print(f'{Fore.RESET}[@{Fore.YELLOW}KYAUTO{Fore.RESET}] [Waiting {Fore.RED}{str(wait_time)} seconds...{Fore.RESET}] {Fore.GREEN}Sent message {Fore.RESET}> {Fore.MAGENTA}{message}{Fore.RESET}')
     keep_alive()
     time.sleep(wait_time)
