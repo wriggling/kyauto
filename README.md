@@ -15,7 +15,7 @@ By using this code, you are automating your Discord Account. This is against Dis
 
 
 ## Help and Support
-THIS WAS MADE BY @cxcvc ON DISCORD, If you have any issues or doubts regarding this, feel free to [contact me](https://discord.gg/hooterz).
+THIS WAS MADE BY @cxcvc ON DISCORD, If you have any issues or doubts regarding this, feel free to [contact me](https://discord.gg/comboy).
 
 ---
 
