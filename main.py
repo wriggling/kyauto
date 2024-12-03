@@ -30,7 +30,7 @@ print(f'''
 {Fore.RED}╦╔═╦ ╦╔═╗╦ ╦╔╦╗╔═╗
 {Fore.RED}╠╩╗╚╦╝╠═╣║ ║ ║ ║ ║
 {Fore.RED}╩ ╩ ╩ ╩ ╩╚═╝ ╩ ╚═╝
-{Fore.RESET}------------------------------
+{Fore.RESET}-----------------------
 {Fore.RESET}USER INFO:
 {Fore.GREEN}User: @{username}
 {Fore.YELLOW}ID: {userid}
