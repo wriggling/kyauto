@@ -23,8 +23,8 @@ userinfo = requests.get('https://canary.discordapp.com/api/v9/users/@me', header
 username = userinfo["username"]
 discriminator = userinfo["discriminator"]
 userid = userinfo["id"]
-guildid = userinfo["channel_id"]
-guildn = userinfo["channel_name"]
+channelid = userinfo["channel_id"]
+guildn = userinfo["guild_name"]
 
 print(f'''
 {Fore.RED}╦╔═╦ ╦╔═╗╦ ╦╔╦╗╔═╗
@@ -34,7 +34,8 @@ print(f'''
 {Fore.RESET}USER INFO:
 {Fore.GREEN}User: @{username}
 {Fore.YELLOW}ID: {userid}
-{Fore.MAGENTA}Server: {channel_name}{Fore.RESET},{Fore.BLUE} {channel_id}
+{Fore.MAGENTA}Server: {guildn}
+{Fore.BLUE}Channel: {channel_id}
 ''')
 
 while True:
