@@ -8,8 +8,11 @@ from colorama import Fore, init
 import requests
 import random
 import time
+import os
 
-init()
+
+def clear(): return os.system('cls') if os.name == 'nt' else os.system('clear')
+
 
 token = os.getenv("token")
 channel_id = os.getenv("channel_id")
