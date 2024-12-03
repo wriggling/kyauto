@@ -35,7 +35,7 @@ print(f'''
 ''')
 
 while True:
-    wait_time = random.randint(1, 3)
+    wait_time = random.randint(16, 20)
 
     message = random.choice(messages)
     json_data = {
