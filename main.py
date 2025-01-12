@@ -46,7 +46,6 @@ while True:
     print(f'{Fore.RESET}[@{Fore.YELLOW}KYAUTO{Fore.RESET}] [Waiting {Fore.RED}{str(wait_time)} seconds...{Fore.RESET}] {Fore.GREEN}Sent message {Fore.RESET}> {Fore.MAGENTA}{message}{Fore.RESET}')
     keep_alive()
     time.sleep(wait_time)
-    await ctx.message.delete()
     msg = await ctx.send(message)
     await asyncio.sleep(0.5)
     await msg.delete()
