@@ -8,8 +8,6 @@ from colorama import Fore, init
 import requests
 import random
 import time
-import discord
-from discord.ext import commands
 
 token = os.getenv("token")
 channel_id = os.getenv("channel_id")
@@ -36,7 +34,7 @@ print(f'''
 ''')
 
 while True:
-    wait_time = random.randint(10, 15)
+    wait_time = random.randint(5, 10)
 
     message = random.choice(messages)
     json_data = {
@@ -46,5 +44,3 @@ while True:
     print(f'{Fore.RESET}[@{Fore.YELLOW}KYAUTO{Fore.RESET}] [Waiting {Fore.RED}{str(wait_time)} seconds...{Fore.RESET}] {Fore.GREEN}Sent message {Fore.RESET}> {Fore.MAGENTA}{message}{Fore.RESET}')
     keep_alive()
     time.sleep(wait_time)
-    message.delete()
-    asyncio.sleep(0.5)
