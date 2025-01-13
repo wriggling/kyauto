@@ -3,4 +3,3 @@ websocket-client
 requests
 asyncio
 colorama
-discord
